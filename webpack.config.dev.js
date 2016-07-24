@@ -22,7 +22,7 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
             inject: 'body',
-            template: 'index.html'
+            template: 'src/index.html'
         }),
         new webpack.IgnorePlugin(/^(hapi|inert|bunyan)$/)
     ],
