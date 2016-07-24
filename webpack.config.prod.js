@@ -10,10 +10,12 @@ module.exports = {
         vendor: _.keys(pkg.dependencies)
     },
     output: {
+        filename: 'bundle.js',
         path: path.join(__dirname, 'build'),
-        filename: 'bundle.js'
+        publicPath: '/assets/'
     },
     plugins: [
+        new webpack.IgnorePlugin(/^(hapi|inert|bunyan)$/),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: Infinity,

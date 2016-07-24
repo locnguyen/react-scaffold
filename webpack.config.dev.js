@@ -23,7 +23,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: 'body',
             template: 'index.html'
-        })
+        }),
+        new webpack.IgnorePlugin(/^(hapi|inert|bunyan)$/)
     ],
     module: {
         loaders: [{
