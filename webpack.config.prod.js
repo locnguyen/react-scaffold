@@ -21,7 +21,6 @@ module.exports = {
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.DefinePlugin({
-            '__DEV__': false,
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
@@ -35,8 +34,8 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            template: 'index.html', // Load a custom template 
-            inject: 'body', // Inject all scripts into the body 
+            template: 'index.html', // Load a custom template
+            inject: 'body', // Inject all scripts into the body
             hash: true
         })
     ],

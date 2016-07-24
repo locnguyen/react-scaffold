@@ -23,13 +23,13 @@ class Counter extends Component {
             <h1 style={{ color: this.props.color }}>
                 Counter ({this.props.increment}): {this.state.counter}
             </h1>
-        )
+        );
     }
 }
 
 Counter.propTypes = {
-    'increment': React.PropTypes.number.isRequired,
-    'color': React.PropTypes.string.isRequired
+    increment: React.PropTypes.number.isRequired,
+    color: React.PropTypes.string.isRequired
 }
 
-export default Counter
+export default Counter;

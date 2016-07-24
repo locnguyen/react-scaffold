@@ -6,7 +6,7 @@ const WebpackDevServer = require('webpack-dev-server');
 const host = 'localhost';
 const port = 8080;
 
-const devServer = new WebpackDevServer(webpack(webpackConfig), {
+new WebpackDevServer(webpack(webpackConfig), {
     historyApiFallback: true,
     hot: true,
     publicPath: webpackConfig.output.publicPath,

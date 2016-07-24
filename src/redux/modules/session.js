@@ -15,34 +15,34 @@ export function doLogin({email, password}) {
     return {
         type: DO_LOGIN,
         payload: {email, password}
-    }
-};
+    };
+}
 
 export function fetchSession() {
     return {
         type: FETCH_SESSION
-    }
+    };
 }
 
 export function receivedSessionSuccess(jwt, user) {
     return {
         type: RECEIEVED_SESSION_SUCCESS,
         payload: {jwt, user}
-    };
+    }
 }
 
 export function receivedSessionError(error) {
     return {
         type: RECEIEVED_SESSION_ERROR,
         error
-    }
+    };
 }
 // end Session actions
 
 // Session reducer
 export default function session(state = initialState, action) {
     switch (action.type) {
-        default:
-            return state;
+    default:
+        return state;
     }
 }

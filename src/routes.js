@@ -1,9 +1,9 @@
 import React from 'react';
-import {Router, Route} from 'react-router';
+import { Route } from 'react-router';
 import App from './App';
 
-export default function getRoutes(checkAuth, history) {
+export default function getRoutes() {
     return (
-        <Route path="/" component={App}/>
+        <Route path="/" component={App} />
     );
 }

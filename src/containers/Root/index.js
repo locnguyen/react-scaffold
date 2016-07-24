@@ -1,8 +1,12 @@
-import React from 'react';
-import {Provider} from 'react-redux';
-import {Router} from 'react-router';
+import React, { PropTypes } from 'react';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router';
 
 export default class Root extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <Provider store={this.props.store}>
@@ -13,3 +17,9 @@ export default class Root extends React.Component {
         );
     }
 }
+
+Root.propTypes = {
+    store: PropTypes.object,
+    history: PropTypes.object,
+    routes: PropTypes.object
+};
